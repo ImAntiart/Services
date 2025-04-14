@@ -6,12 +6,12 @@ html, body {
     max-width: 320px;
     height: 597px;
     background-color: #FFFFFF;
-    box-sizing: border-box;
+/*     box-sizing: border-box; */
     overflow-x: hidden;
 }
 
 @media (min-width: 784px) {
-    body {
+    html, body {
         max-width: 784px;
         width: 100%;
         height: 504px;
@@ -19,7 +19,7 @@ html, body {
 }
 
 @media (min-width: 1121px) {
-    body {
+    html, body {
         max-width: 1121px;
         width: 100%;
         height: 535px;
@@ -35,9 +35,14 @@ nav {
     height: 88px;
 }
 
+
+
 @media (min-width: 784px) {
     nav {
-
+        max-width: 768px;
+        width: 100%;
+        height: 88px;
+        justify-content: space-between;
     }
 }
 
@@ -47,22 +52,52 @@ nav {
     }
 }
 
+.navFirst,
+.navSecond {
+    display: contents; 
+}
+
+@media (min-width: 784px) {
+    .navFirst {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 227.28px; 
+    }
+}
+
+@media (min-width: 784px) {
+    .navSecond {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.hideOnLow {
+    display: none;
+}
+
+@media (min-width: 784px) {
+    .hideOnLow {
+        display: inline-block; 
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    max-width: 320px;
     height: 509px;
     background-color: #F8F8F8;
     overflow: hidden; 
 }
 
-.n {
-    width: 200px;
-    height: 150px;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (min-width: 784px) {
+    main {
+        max-width: 769px;
+        width: 100%;
+        height: 416px;
+    }
 }
 
 .mainTop {
@@ -72,14 +107,24 @@ justify-content: space-evenly;
 height: 152px;
 }
 
+@media (min-width: 784px) {
+    .mainTop  {
+        height: 168px;
+        justify-content:flex-start; 
+    }
+}
+
 .mainHeader {
     display: flex;
     align-items: center;
     gap: 12px;
     width: 304px;
     height: 40px;
-
+    color: #1B1C21;
+    ;
 }
+
+
 
 .mainHeader h2 {
     font-family: "TT Lakes";
@@ -89,14 +134,29 @@ height: 152px;
     letter-spacing: -0.6px;
 }
 
+@media (min-width: 784px) {
+    .mainHeader {
+        width: 257px; 
+        gap: 20px;
+    }
+}
+
 .scrollMenu {
     display: flex;
     margin-left: 16px;
-    width: auto; 
+/*     width: auto;  */
     height: 40px; 
     white-space: nowrap;
-/*     overflow-x: auto;  */
+/*    overflow-x: auto;   */
+    position: relative;  
     }
+
+    @media (min-width: 784px) {
+        .scrollMenu {
+            margin-left: 24px;
+        }
+    }
+    
 
 .menuItem {
     display: flex;
@@ -115,6 +175,13 @@ height: 152px;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.2px;
+}
+
+@media (min-width: 784px) {
+    .menuItem {
+        box-sizing: border-box;
+        height: 40px; 
+    }
 }
 
  .menuItem:first-child {
@@ -142,7 +209,22 @@ height: 152px;
     } 
 }
 
+.scrollFade {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    width: 24px; 
+    height: 40px; 
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); 
+    pointer-events: none; 
+}
 
+@media (min-width: 784px) {
+    .scrollFade {
+        top: 0;
+        right: 32px;
+    }
+}
 
 
 .mainContent {
@@ -153,6 +235,15 @@ height: 152px;
 /*     gap: 16px; */
 }
 
+@media (min-width: 784px) {
+    .mainContent {
+        flex-direction: row;
+        width: 720px;
+        height: 208px;
+/*         gap: 32px; */
+    }
+}
+
 .mainDescrtion {
     display: flex;
     flex-direction: column;
@@ -160,20 +251,52 @@ height: 152px;
     height: 154px;
     gap: 16px;
     margin-left: 16px;
-}
 
-.descritionText {
-    width: 288px;
-    height: 90px;
-/*     overflow: hidden; */
     text-overflow: ellipsis; 
-
     font-family: "Lakes";
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #1B1C21;
+}
+
+
+@media (min-width: 784px) {
+    .mainDescrtion {
+        margin-left: 24px;
+        width: 346px;
+        height: 160px;
+/*         gap: 32px; */
+    }
+}
+
+.descritionText {
+    width: 288px;
+    height: 90px;
+/*     overflow: hidden; */
+}
+
+.descritionText > div:first-child {
+    margin-bottom: 1em; 
+}
+
+@media (min-width: 784px) {
+    .descritionText {
+        width: 312px;
+        height: 160px;
+    }
+}
+
+
+.descritionTextTwo {
+    display: none;
+}
+
+@media (min-width: 784px) {
+    .descritionTextTwo {
+        display: inline-block; 
+    }
 }
 
 .expand {
@@ -194,6 +317,12 @@ height: 152px;
 margin-left: 8px;
 }
 
+@media (min-width: 784px) {
+    .descritionTextTwo {
+        display: inline-block; 
+    }
+}
+
 
 .companyImg {
     width: 320px;
@@ -204,4 +333,11 @@ margin-left: 8px;
     width: 320px;
     height: 176px;
     object-fit: cover; 
+}
+
+@media (min-width: 784px) {
+    .companyImg img {
+        width: 360px;
+        height: 208px;
+    }
 }
