@@ -68,8 +68,10 @@ nav {
 
 @media (min-width: 784px) {
     .navSecond {
+        width: 332px;
         display: flex;
         align-items: center;
+        justify-content: space-around;
     }
 }
 
@@ -110,7 +112,7 @@ height: 152px;
 @media (min-width: 784px) {
     .mainTop  {
         height: 168px;
-        justify-content:flex-start; 
+/*         justify-content:flex-start;  */
     }
 }
 
@@ -181,6 +183,7 @@ height: 152px;
     .menuItem {
         box-sizing: border-box;
         height: 40px; 
+        padding: 2%;
     }
 }
 
@@ -221,8 +224,7 @@ height: 152px;
 
 @media (min-width: 784px) {
     .scrollFade {
-        top: 0;
-        right: 32px;
+
     }
 }
 
@@ -277,8 +279,8 @@ height: 152px;
 /*     overflow: hidden; */
 }
 
-.descritionText > div:first-child {
-    margin-bottom: 1em; 
+.descritionTextOne {
+    margin-bottom: 2em; 
 }
 
 @media (min-width: 784px) {
